@@ -5,7 +5,6 @@ using namespace std;
 void sum(int a, int b, int *c) { //pass by value
     *c =  a + b;
 }
-
 void sum(int *a, int *b , int *c) { //passing pointers
     *c = *a + *b;
 }
@@ -16,18 +15,15 @@ void sum(int &a, int &b, int &c) {
 
 int main(int argc, char * argv[])
 {
-    cout << argc << endl; // argc = number of arguments on the input line
-    int a = argc; 
+    int a = 5; 
+    
     int *b;
     cout<<b; // b = address of b
     cout << static_cast<int>(*b) << endl; // *b = value of b, which is unassigned
     b = &a; // b = address of a
-    cout << static_cast<int>(*b) << endl; // *b = value of a
+    cout << *b << "wartość komorki na ktora wskazuje b" << endl; // *b = value of a
+    *b  = 3;
 
-    int c = 0;
-    sum(a, *b, &c); // we passed the address of c and the value of a and value of cell which is stored by b
-    cout<<c<<endl;
-
-
+    cout << a << "wartość  a" << endl; // a = value of b
     return 0;
 }
