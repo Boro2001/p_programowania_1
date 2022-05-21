@@ -75,10 +75,6 @@ int count_occurances_in_file(string file_name, string pattern, int size)
     return 0;
 }
 
-
-
-
-
 int main(int argc, char * argv[])
 {
     string pattern = argv[1]; 
